@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+{% include "offcanvas.html" %}
+
+{% block content %}
+<section class="vh-100 gradient-custom" id="register">
+  <div class="container py-5 h-100">
+    <div class="row justify-content-center align-items-center h-100">
+      <div class="col-12 col-lg-9 col-xl-7">
+        <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+          <div class="card-body p-4 p-md-5">
+            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Sign-up</h3>
+            <form method="post">
+            {{ form.hidden_tag() }}
+              <fieldset class="form-group vstack gap-3 md-5 pb-5">
+
+                <div class="form-outline ">
+                  {% if form.username.errors %}
+                  {{ form.username(class="form-control form-control-lg is-invalid") }} 
+                    <div class="invalid-feedback">
+                        {% for error in form.username.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                  {{ form.username.label() }}{{ form.username(class="form-control form-control-lg" ) }} 
+                {% endif %}
+                </div>
+
+                <div class="form-outline ">
+                  {% if form.email.errors %}
+                  {{ form.email(class="form-control form-control-lg is-invalid") }} 
+                    <div class="invalid-feedback">
+                        {% for error in form.email.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                  {% else %}
+                    {{ form.email.label() }}{{ form.email(class="form-control form-control-lg" ) }} 
+                  {% endif %}
+                </div>
+
+                <div class="form-outline ">
+                  {% if form.password.errors %}
+                  {{ form.password(class="form-control form-control-lg is-invalid") }} 
+                    <div class="invalid-feedback">
+                        {% for error in form.password.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                  {% else %}
+                    {{ form.password.label() }}{{ form.password(class="form-control form-control-lg" ) }} 
+                  {% endif %}
+                </div>
+
+                <div class="form-outline ">
+                  {% if form.confirm_password.errors %}
+                  {{ form.confirm_password(class="form-control form-control-lg is-invalid") }} 
+                    <div class="invalid-feedback">
+                        {% for error in form.confirm_password.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                  {% else %}
+                    {{ form.confirm_password.label() }}{{ form.confirm_password(class="form-control form-control-lg" ) }} 
+                  {% endif %}
+                </div>
+              </fieldset>
+
+              <div class="mt-4 pt-2">
+                {{ form.submit( class="w-100 mb-2 btn btn-lg rounded-3 btn-warning") }}
+              </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+{% endblock content %}
+
+  

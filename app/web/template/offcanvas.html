@@ -1,0 +1,46 @@
+{% block offcanvas %}
+<div class="offcanvas offcanvas-start bg-light opacity-50% " data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+    <button type="button" class="btn-close mt-4 position-absolute  end-0 translate-middle" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <div class="align-items-center">
+        <div class="offcanvas-header d-flex justify-content-center align-items-center">
+            <h5 class="offcanvas-title">
+            {% if current_user.is_authenticated %}
+            <span><img src="{{ current_user.id_profile.image_file }}" alt="" class="thumbnail"></span>
+            {% else %}
+            <span><img src={{ url_for('static', filename='images/logo_vazada.png') }} alt="" class="img-fluid mx-auto d-block pt-3" style="max-width: 35%;"></span>
+            {% endif %}
+        </div>
+        <div class="offcanvas-boddy d-flex justify-content-center align-items-center">
+            <ul class="list-group text-center border m-5 bg-white p-3 rounded-5">
+            {% if current_user.is_authenticated %}
+            
+                <h5>{{current_user.username}}</h5>
+                <div class="vstack gap-3 pb-3 pt-3 ">
+                    <button type="button" class="btn btn-outline-success desable"> <a class="nav-item nav-link" href="/profile">Conta</a> </button>
+                    <button type="button" class="btn btn-outline-success"> <a class="nav-item nav-link" href="/post">Nova campanha</a> </button>
+                    <button type="button" class="btn btn-outline-success"> <a class="nav-item nav-link" href="/logout">Sair</a> </button>
+                    {% if current_user.roles.role == 'Donor' %}
+                    <button type="button" class="btn btn-warning" >
+                        <a class="nav-link active" href="/profile">Participe</a>
+                    </button>
+                    {% endif %}
+                </div>
+            {% else %}
+                <h5 class="fw-semibold p-3">Projeto de Auxílio à Doação</h5>
+                <div class="vstack gap-3 pb-3 pt-3">
+                    <button type="button" class="btn btn-outline-warning" >
+                        <a class="nav-link active" href="/signup">Sign-up</a>
+                    </button>
+                    <button type="button" class="btn btn-warning" >
+                        <a class="nav-link active" href="/login">Log-in</a>
+                    </button>
+                </div>
+            {% endif %}
+            </ul>
+        </div>
+        <div class="offcanvas-footer pt-5 justify-content-end align-self-center">
+                <p class="text-center text-muted m-4">© 2022 UPE, POLI</p>
+        </div>
+    </div>
+</div>
+{% endblock offcanvas %}

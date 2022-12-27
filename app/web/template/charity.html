@@ -1,0 +1,90 @@
+{% block charity %}
+<div class="container-flex pt-5 pb-5">
+
+    <div class="d-flex flex-row justify-content-center align-items-center">
+
+        <div class="d-flex justify-content-center w-3" style="min-width: 33%;">
+            <div class="alert alert-danger opacity-50" role="alert" style="max-width:450px;">
+                <small class="fs-9 fw-bold"> Mensagem: As postagens nesse site não representam a real demanda 
+                    das instituições mencionadas, pois essas estão em processo de formalização/oficialização. O conteúdo
+                    apresentado é um material em construção.
+                </small>
+            </div>
+        </div>
+    
+        <div class="d-flex justify-content-center" style="min-width: 33%;">
+            <h2 class="pb-1 ">Instituições</h2>
+        </div>
+        <div class="d-flex flex-fill" style="min-width: 33;"></div>
+    </div>
+
+    <div class="card-group"></div>
+        <div class="d-flex flex-row justify-content-center m-4">
+
+            <div class="card d-flex justify-content-around m-2" style="min-width: 33%;">
+                <div class="d-flex flex-row align-items-center justify-content-center" style="min-width:300px;">
+                    <div class="justify-content-center align-items-center pt-3">
+                        <img src={{ url_for('static', filename='images/pequenos_profetas.jpg') }} alt="logo Padrao" class="img-fluid" style="width:  200px;">
+                    </div>
+                </div>
+                <div class="d-flex flex-row align-items-center justify-content-center d-md-block">
+                    <h3 class="card-title text-center font-wt-bold m-2 bg-white">Pequenos Profetas </h3>
+                </div>
+                <div class="d-flex flex-row align-items-end bg-white p-2">
+                    <div class="row align-items-center">
+                        <p class="fs-9">
+                            A nossa entidade trabalha com projetos e iniciativas que ajudam a amenizar, combater e reverter os problemas
+                            enfrentados pelos jovens. Projetos que colaboram para a efetivação da cidadania, a valorização cultural, o respeito
+                            ao meio ambiente, o desenvolvimento comunitário 
+                            e que proporcionam uma melhor qualidade de vida para as comunidades com baixo índice de desenvolvimento humano.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card d-flex justify-content-around m-2 bg-white" style="min-width: 33%;">
+                <div class="d-flex flex-row align-items-center justify-content-center" style="min-width:300px;">
+                    <div class="justify-content-center align-items-center pt-3">
+                        <img src={{ url_for('static', filename='images/lar_de_jesus.jpg') }} alt="logo Padrao" class="img-fluid" style="width: 200px;">
+                    </div>
+                </div>
+                <div class="d-flex flex-row align-items-center justify-content-center">
+                    <h3 class="card-title text-center font-wt-bold m-2">Lar de Jesus</h3>
+                </div>
+                <div class="d-flex flex-row align-items-end bg-white p-2">
+                    <div class="row align-items-center">
+                        <p class="fs-9">
+                            É uma instituição que foi reconhecida por sua Utilidade Pública conforme Lei Municipal n.º 11.252/1974 que não
+                            possui finalidade lucrativa e que desenvolve atividades de casa espírita e instituição de longa permanência de
+                            pessoas idosas (ILPI), abrigando atualmente aproximadamente 30 mulheres.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card d-flex justify-content-around m-2 bg-white" style="min-width: 33%;">
+                <div class="d-flex flex-row align-items-center justify-content-center" style="min-width:300;">
+                    <div class="justify-content-center align-items-center pt-3">
+                        <img src={{ url_for('static', filename='images/uniluz.jpg') }} alt="logo Padrao" class="card-img-top img-fluid" style="width: 200px;">
+                    </div>
+                </div>
+                <div class="d-flex flex-row align-items-center justify-content-center">
+                    <h3 class="card-title text-center font-wt-bold m-2">Uniluz</h3>
+                </div>
+                <div class="d-flex flex-row align-items-center p-2">
+                    <p class="fs-9">
+                        DOUTRINA ESPÍRITA: Respeitar os princípios da Doutrina Espírita.
+
+                        UNIÃO: Primar pela união, solidariedade e sinceridade no relacionamento interpessoal da instituição.
+
+                        COORDENAÇÃO GERAL: Sylvia Boschi
+                        ADJUNTA - Vânia Menezes
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock charity %}

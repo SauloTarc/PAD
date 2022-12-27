@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% include "offcanvas.html" %}
+
+
+{% block content %}
+<div class="d-none d-lg-block">
+    <div class="d-flex bg-light border-bottom  border-dark">
+        <div class="d-flex flex-column align-items-start pb-5 wb-5">
+            <img src={{ url_for('static', filename='image/icone_concavo.svg') }} style="max-width: 100%; min-width: none;" class="img-fluid" ></img>
+        </div>
+        <div class="col-7 text-center mb-auto mt-auto" style="min-width: 50%;">
+                <blockquote class="fs-2 fw-semibold  ">Sobre</blockquote>
+                <p class="fs-5 pb-4">Atualmente, vivemos um período de dificuldades por conta de catástrofes naturais, doenças e crises econômicas, que acarretou no aumento de pessoas tendo que viver em situação de rua, famílias que perderam tudo devido à chuva, alimentos e itens básicos com preços altos, e ainda mais, a dependência dessa parte da população dos projetos de doação.
+                    Ademais, vale a pena ressaltar, que apesar de haver projetos do governo para ajudar essas pessoas, a desconfiança, acomodação, dificuldade financeira e a falta de conhecimento sobre esses projetos fazem com que a adesão de doadores cada vez mais caia no país, segundo a matéria “Cultura de doação: Por que não doamos mais?” do site Arredondar.org.br.
+                    Desse modo, nesta disciplina de extensão, estamos colocando em prática na sociedade os conhecimentos adquiridos na área de programação para criar a PAD. Em suma, fica clara a importância da nossa plataforma para facilitar o acesso a informações sobre esses projetos, diminuindo as dificuldades na busca pela instituição de doação ideal, além disso, nossa plataforma fomenta a empatia na sociedade, incentivando potenciais doadores a fazerem a sua parte, aumentando a quantidade de doações e contribuindo assim para o bem estar dessa parcela da população carente.
+                </p>
+        </div>
+        <div class="d-flex flex-column text-end align-items-end justify-content-end">
+            <img src="{{ url_for('static', filename='image/icone_concavo_baixo.svg') }}" style="max-width: 100%;" class="img-fluid pt-5 " >
+        </div>
+    </div>
+</div>
+<div class="text-center">
+    {% include "charity.html" %}
+</div>
+
+
+        {% include "ex_post.html" %}    
+</div>
+
+  
+{% endblock content %}

@@ -1,0 +1,106 @@
+{% extends "layout.html" %}
+{% include "offcanvas.html" %}
+
+{% block content %}
+{% if  current_user %}
+<div class="container-sm mb-5 mt-5">
+    <form method="post">
+      {{ form.hidden_tag() }}
+      <fieldset class="form-group vstack gap-3 m-3 p-5">
+        <div class="text-center">
+          <h1>Participe</h1>
+        </div>
+        <div class="vstack p-3">
+          <div class="card m-5 rounded-5">
+              <div class="p-3">
+                <div class="p-3 text-center">
+                  <p class="fs-4">Preencha todo o formulário abaixo e participe do nosso projeto.
+                    Sua resposta será analisada e se aprovada você terá acesso à plataforma como uma instituição parceira.
+                  </p>
+                </div>
+              </div>
+          <div class="card m-5 rounded-5 p-5">
+            <div class="form-outline pb-3">
+            {% if form.institucional_name.errors %}
+            {{ form.institucional_name(class="form-control form-control-lg is-invalid") }} 
+              <div class="invalid-feedback">
+                  {% for error in form.institucional_name.errors %}
+                      <span>{{ error }}</span>
+                  {% endfor %}
+              </div>
+            {% else %}
+              {{ form.institucional_name.label(class="fs-4") }}{{ form.institucional_name(class="form-control form-control-lg" ) }} 
+            {% endif %}
+            </div>
+
+            <div class="hstack gap-3 pb-3">
+              <div class="form-outline ">
+                {% if form.cnpj.errors %}
+                {{ form.cnpj(class="form-control form-control-lg is-invalid") }} 
+                  <div class="invalid-feedback">
+                      {% for error in form.cnpj.errors %}
+                          <span>{{ error }}</span>
+                      {% endfor %}
+                  </div>
+                {% else %}
+                  {{ form.cnpj.label(class="fs-4") }}{{ form.cnpj(class="form-control form-control-lg" ) }} 
+                {% endif %}
+              </div>
+        
+              <div class="form-outline ">
+                {% if form.phone.errors %}
+                {{ form.phone(class="form-control form-control-lg is-invalid") }} 
+                  <div class="invalid-feedback">
+                      {% for error in form.phone.errors %}
+                          <span>{{ error }}</span>
+                      {% endfor %}
+                  </div>
+                {% else %}
+                  {{ form.phone.label(class="fs-4") }}{{ form.phone(class="form-control form-control-lg" ) }} 
+                {% endif %}
+              </div>
+            </div>
+      
+            <div class="form-outline pb-3">
+              {% if form.about.errors %}
+              {{ form.about(class="form-control form-control-lg is-invalid") }} 
+                <div class="invalid-feedback">
+                    {% for error in form.about.errors %}
+                        <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+              {% else %}
+                {{ form.about.label(class="fs-4") }}{{ form.about(class="form-control form-control-lg" ) }} 
+              {% endif %}
+            </div>
+
+            <div class="hstack gap-3 p-3 justify-content-start">
+
+              {% if form.image_file.errors %}
+              {{ form.image_file(class="form-control form-control-lg is-invalid") }} 
+                <div class="invalid-feedback">
+                    {% for error in form.image_file.errors %}
+                        <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+              {% else %}
+              {{ form.image_file(class="form-control form-control" ) }} 
+              {% endif %}
+
+              {{ form.profile_type(class="form-select") }}
+              {% for i,type in enumerate(ProfileType) %} 
+                <option value="i">{{type}}</option>
+              {% endfor %}
+          </div>
+
+          <div class="form-outline text-center p-3">
+            {{ form.submit(class="btn btn-outline-warning btn-lg" ) }}
+          </div>
+            
+          </div>
+      </fieldset>
+    </form>
+  </div>
+</div>
+{% endif %}
+{% endblock %}

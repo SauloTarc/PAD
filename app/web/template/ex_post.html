@@ -1,0 +1,136 @@
+{% block ex_post %}
+<div class="container-flex fw-bold text-white text-center p-5" style="background-color: #008066 ;">
+    <h2 class="title">
+        Últimas Campanhas
+    </h2>
+</div>
+
+<div class="container pt-5 pb-5 bg-white">
+    <div class="card-group"></div>
+        <div class="row justify-content-center mb-4">
+
+            <div class="card d-flex justify-content-center m-3" style="max-width: 500px;">
+                <div class="col g-0 ">
+                    <div class="text-center p-2 pt-3">
+                        <img src={{ url_for('static', filename='images/pequenos_profetas.jpg') }} alt="logo Padrao" class="card-img-top img-fluid" style="max-width: 50%;">
+                    </div>
+                    <div class="card-body align-self-center">
+                        <h3 class="card-title text-center font-wt-bold"> Produtos de Limpeza </h3>
+                        <div class="row align-items-center">
+                            <ul class="list-group">
+                                <li class="card-subtitle list-group-item text-center"> Pequenos Profetas</li>
+                                <li class="card-text list-group-item"><b>Tipo</b>: Banheiro</li>
+                                <li class="card-text list-group-item"><b>Descrição</b>: Aceita-se doação de produtos de limpeza</li>
+                                <li class="card-text list-group-item"><small class="text-muted"><b>Endereço</b>: Av. Sul, 110 - Bairro de São José. Recife Pernambuco Brasil  </small></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card d-flex justify-content-center m-3" style="max-width: 500px;">
+                <div class="col g-0 ">
+                    <div class="text-center p-2 pt-3">
+                        <img src={{ url_for('static', filename='images/pequenos_profetas.jpg')}} alt="logo Padrao" class="card-img-top img-fluid" style="max-width: 50%;">
+                    </div>
+                    <div class="card-body align-self-center">
+                        <h3 class="card-title text-center font-wt-bold"> Horta </h3>
+                        <div class="row align-items-center">
+                            <ul class="list-group">
+                                <li class="card-subtitle list-group-item text-center"> Pequenos Profetas</li>
+                                <li class="card-text list-group-item"><b>Tipo</b>: Produtos de Jardinagem </li>
+                                <li class="card-text list-group-item"><b>Descrição</b>: Aceita-se doação de insumos para jardinagem, adubo ou mesmo material pare se reaproveitar </li>
+                                <li class="card-text list-group-item"><small class="text-muted"><b>Endereço</b>: Av. Sul, 110 - Bairro de São José. Recife Pernambuco Brasil </small></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card d-flex justify-content-center m-3" style="max-width: 500px;">
+                <div class="col g-0 ">
+                    <div class="text-center p-2 pt-3">
+                        <img src="{{ url_for('static', filename='images/lar_de_jesus.jpg')}}" alt="logo Padrao" class="card-img-top img-fluid" style="max-width: 50%;">
+                    </div>
+                    <div class="card-body align-self-center">
+                        <h3 class="card-title text-center font-wt-bold text-center">Produtos de Higiene Pessoal</h3>
+                        <div class="row align-items-center">
+                            <ul class="list-group">
+                                <li class="card-subtitle list-group-item text-center"> Abrigo Espírita Lar de Jesus</li>
+                                <li class="card-text list-group-item"><b>Tipo</b>: Higiene Pessoal </li>
+                                <li class="card-text list-group-item"><b>Descrição</b>: Aceita-se doções de produtos para a higiene pessoal como sabonete, creme dental, shampoo ... </li>
+                                <li class="card-text list-group-item"><small class="text-muted"><b>Endereço</b>: Rua Vitoriano Palhares, 77, Torre Recife, PE </small></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card d-flex justify-content-center m-3" style="max-width: 500px;">
+                <div class="col g-0 ">
+                    <div class="text-center p-2 pt-3">
+                        <img src={{ url_for('static', filename='images/uniluz.jpg')}} alt="logo Padrao" class="card-img-top img-fluid" style="max-width: 50%;">
+                    </div>
+                    <div class="card-body align-self-center">
+                        <h3 class="card-title text-center font-wt-bold"> Pintura </h3>
+                        <div class="row align-items-center">
+                            <ul class="list-group">
+                                <li class="card-subtitle list-group-item text-center"> Uniluz </li>
+                                <li class="card-text list-group-item"><b>Tipo</b>: Serviço Voluntário </li>
+                                <li class="card-text list-group-item"><b>Descrição</b>: Entrar em contato e passar informações </li>
+                                <li class="card-text list-group-item"><small class="text-muted"><b>Endereço</b>: Rua Sá e Souza - 1415, Recife, PE, Brazil, 51130-050 </small></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card d-flex justify-content-center m-3" style="max-width: 500px;">
+                <div class="col g-0 ">
+                    <div class="text-center p-2 pt-3">
+                        <img src={{ url_for('static', filename='images/uniluz.jpg')}} alt="logo Padrao" class="card-img-top img-fluid" style="max-width: 50%;">
+                    </div>
+                    <div class="card-body align-self-center">
+                        <h3 class="card-title text-center font-wt-bold"> Reforma </h3>
+                        <div class="row align-items-center">
+                            <ul class="list-group">
+                                <li class="card-subtitle list-group-item text-center">Uniluz</li>
+                                <li class="card-text list-group-item"><b>Tipo</b>: Mão de obra </li>
+                                <li class="card-text list-group-item"><b>Descrição</b>: Entrar em contato e passar informações </li>
+                                <li class="card-text list-group-item"><small class="text-muted"><b>Endereço</b>: Rua Sá e Souza - 1415, Recife, PE, Brazil, 51130-050 </small></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card d-flex justify-content-center m-3" style="max-width: 500px;">
+                <div class="col g-0 ">
+                    <div class="text-center p-2 pt-3">
+                        <img src={{ url_for('static', filename='images/lar_de_jesus.jpg')}} alt="logo Padrao" class="card-img-top img-fluid" style="max-width: 50%;">
+                    </div>
+                    <div class="card-body align-self-center">
+                        <h3 class="card-title text-center font-wt-bold">Alimentos Saudáveis para Idosos</h3>
+                        <div class="row align-items-center">
+                            <ul class="list-group">
+                                <li class="card-subtitle list-group-item text-center"> Lar de Jesus </li>
+                                <li class="card-text list-group-item"><b>Tipo</b>: Produtos alimentícios </li>
+                                <li class="card-text list-group-item"><b>Descrição</b>:  </li>
+                                <li class="card-text list-group-item"><small class="text-muted"><b> Rua Vitoriano Palhares, 77, Torre Recife, PE  </small></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center">
+                <li>
+                    <a class="btn btn-warning m-1" href="#">1</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+{% endblock ex_post %}

@@ -1,0 +1,51 @@
+{% block post %}
+<div class="container-flex fw-bold text-white text-center p-5" style="background-color: #008066 ;">
+    <h2 class="title">
+        Últimas Campanhas
+    </h2>
+</div>
+<div class="container-lg pt-5 pb-5 bg-white">
+    <div class="card-group"></div>
+        <div class="row justify-content-center mb-4">
+            {% for post in posts.items %}
+            <div class="card d-flex justify-content-center m-3" style="max-width: 500px;">
+                <div class="col g-0 ">
+                    <div class="text-center p-2 pt-3">
+                        <img src={{ url_for('static', filename='images/logo_vazada.png') }} alt="logo Padrao" class="card-img-top img-fluid" style="max-width: 50%;">
+                    </div>
+                    <div class="card-body align-self-center">
+                        <h3 class="card-title text-center font-wt-bold">{{post.title}}</h3>
+                        <div class="row align-items-center">
+                            <ul class="list-group">
+                                <li class="card-subtitle list-group-item"> {{post.profiles.users.username}} </li>
+                                <li class="card-text list-group-item"><b>Tipos</b>: {{post.tags.tag}} </li>
+                                <li class="card-text list-group-item"><b>Descrição</b>: {{post.description}} </li>
+                                <li class="card-text list-group-item"><small class="text-muted"><b>Endereço</b>: rua {{post.profiles.adresses.street}}, número {{post.profiles.adresses.number}} </small></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center">
+            {% for page_num in posts.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
+                {% if page_num %}
+                    {% if posts.page == page_num %}
+                        <li>
+                            <a class="btn btn-warning m-1" href="{{ url_for('bp.index', page=page_num) }}">{{ page_num }}</a>
+                        </li>
+                    {% else %}
+                        <li>
+                            <a class="btn btn-outline-warning m-1" href="{{ url_for('bp.index', page=page_num) }}">{{ page_num }}</a>
+                        </li>
+                    {% endif %}
+                {% else %}
+                {% endif %}
+            {% endfor %}
+            </ul>
+        </nav>
+    </div>
+</div>
+{% endblock post %}
